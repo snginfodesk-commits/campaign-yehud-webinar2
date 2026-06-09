@@ -128,6 +128,26 @@ src="https://www.facebook.com/tr?id=985722164425425&ev=PageView&noscript=1"
     margin-bottom: 16px; letter-spacing: -0.2px;
   }
 
+  /* Hero two-column (text + building visual) */
+  .hero-top {
+    display: grid; grid-template-columns: 1.05fr 0.95fr;
+    gap: 44px; align-items: center; text-align: right; margin-bottom: 8px;
+  }
+  .hero-text h1, .hero-text .lede { margin-right: 0; margin-left: 0; max-width: none; }
+  .hero-visual { position: relative; }
+  .hero-visual img {
+    width: 100%; height: auto; display: block; border-radius: 18px;
+    border: 1px solid var(--border);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(99,110,250,0.12);
+  }
+  @media (max-width: 880px) {
+    .hero-top { grid-template-columns: 1fr; gap: 26px; text-align: center; }
+    .hero-text { order: 2; }
+    .hero-visual { order: 1; max-width: 340px; margin: 0 auto; }
+    .hero-text h1 { margin-right: auto; margin-left: auto; max-width: 860px; }
+    .hero-text .lede { margin-right: auto; margin-left: auto; max-width: 620px; }
+  }
+
   /* Date badge */
   .datetime {
     display: inline-flex; flex-wrap: wrap; gap: 10px; justify-content: center;
@@ -258,6 +278,8 @@ src="https://www.facebook.com/tr?id=985722164425425&ev=PageView&noscript=1"
 <!-- 1. Above the Fold -->
 <header class="hero">
   <div class="container">
+    <div class="hero-top">
+      <div class="hero-text">
     <span class="eyebrow">⏳ נותרו <strong id="countdown">09:00</strong> דקות להרשמה לוובינר</span>
     <h1>פרוייקט פריסייל שקט ביהוד לפני פרסום<br><span class="grad">בתנאים שאסור לפספס</span></h1>
     <p class="hero-price">רק <strong>450,000 ש״ח</strong></p>
@@ -266,6 +288,11 @@ src="https://www.facebook.com/tr?id=985722164425425&ev=PageView&noscript=1"
       <span class="lede-hook">הזדמנויות כאלה לא מפספסים</span>
       הרשמו לוובינר שבו נחשוף את שאר התנאים ואת הפוטנציאל שיש באזור ההשקעה
     </p>
+      </div>
+      <div class="hero-visual">
+        <img src="building.svg" alt="הדמיית בניין מגורים חדש להשקעה ביהוד" width="560" height="760" loading="eager">
+      </div>
+    </div>
 
     <div class="datetime">
       <div class="dt-chip">📅 יום שלישי, <strong>16.6</strong></div>
