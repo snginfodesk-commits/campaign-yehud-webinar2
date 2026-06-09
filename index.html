@@ -302,7 +302,7 @@ src="https://www.facebook.com/tr?id=985722164425425&ev=PageView&noscript=1"
     <div class="form-card" id="register">
       <h3>שריינו את המקום שלכם</h3>
       <p class="form-sub">הזינו פרטים ונשמור לכם מקום בשידור</p>
-      <form class="reg-form" data-redirect="webinar-thank-you.html">
+      <form class="reg-form" data-redirect="https://event.ironteam.co.il/webinar-thank-you.html">
         <div class="field">
           <label for="name">שם מלא</label>
           <input type="text" id="name" name="name" placeholder="ישראל ישראלי" required>
@@ -366,7 +366,7 @@ src="https://www.facebook.com/tr?id=985722164425425&ev=PageView&noscript=1"
       <div class="form-card">
         <h3>שריינו את המקום שלכם</h3>
         <p class="form-sub">לא צריך לגלול חזרה למעלה 🙂</p>
-        <form class="reg-form" data-redirect="webinar-thank-you.html">
+        <form class="reg-form" data-redirect="https://event.ironteam.co.il/webinar-thank-you.html">
           <div class="field">
             <label for="name2">שם מלא</label>
             <input type="text" id="name2" name="name" placeholder="ישראל ישראלי" required>
@@ -419,7 +419,7 @@ src="https://www.facebook.com/tr?id=985722164425425&ev=PageView&noscript=1"
       e.preventDefault();
       var btn = form.querySelector('button[type="submit"]');
       if (btn) { btn.disabled = true; btn.style.opacity = '0.7'; }
-      var redirect = form.getAttribute('data-redirect') || 'webinar-thank-you.html';
+      var redirect = form.getAttribute('data-redirect') || 'https://event.ironteam.co.il/webinar-thank-you.html';
       var data = {
         name: form.querySelector('[name="name"]').value.trim(),
         email: form.querySelector('[name="email"]').value.trim(),
