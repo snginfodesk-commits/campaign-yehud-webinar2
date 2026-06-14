@@ -158,12 +158,25 @@ src="https://www.facebook.com/tr?id=985722164425425&ev=PageView&noscript=1"
 
   /* Form card */
   .form-card {
-    background: var(--card); border: 1px solid var(--border);
+    position: relative; overflow: hidden;
+    background:
+      linear-gradient(180deg, rgba(245,181,74,0.10), rgba(245,181,74,0) 160px),
+      var(--card);
+    border: 2px solid var(--gold);
     border-radius: 16px; padding: 32px; max-width: 480px;
     margin: 36px auto 0; text-align: right;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    box-shadow: 0 0 0 4px rgba(245,181,74,0.12), 0 20px 60px rgba(245,181,74,0.18);
   }
-  .form-card h3 { font-size: 21px; margin-bottom: 6px; text-align: center; }
+  .form-card::before {
+    content: ""; position: absolute; inset: 0 0 auto 0; height: 5px;
+    background: linear-gradient(90deg, var(--gold), #ffd98a, var(--gold));
+  }
+  @keyframes formGlow {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(245,181,74,0.12), 0 20px 60px rgba(245,181,74,0.18); }
+    50% { box-shadow: 0 0 0 6px rgba(245,181,74,0.22), 0 22px 70px rgba(245,181,74,0.30); }
+  }
+  .form-card { animation: formGlow 2.6s ease-in-out infinite; }
+  .form-card h3 { font-size: 23px; margin-bottom: 6px; text-align: center; color: #ffd98a; font-weight: 900; }
   .form-card .form-sub { color: var(--muted); font-size: 14px; text-align: center; margin-bottom: 22px; }
   .field { margin-bottom: 14px; }
   .field label { display: block; font-size: 14px; margin-bottom: 6px; color: var(--text); font-weight: 500; }
